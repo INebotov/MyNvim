@@ -68,25 +68,6 @@ require("lazy").setup({
         config = function()
             require("configs.lsp")
         end
-
-    },
-    {
-        'mbbill/undotree',
-        config = function()
-            require("configs.undotree")
-        end
-    },
-    {
-        'ThePrimeagen/harpoon',
-        config = function()
-            require("configs.harpoon")
-        end
-    },
-    {
-        'jbyuki/venn.nvim',
-        config = function()
-            require("configs.venn")
-        end
     },
     {
         'romgrk/barbar.nvim',
@@ -101,12 +82,6 @@ require("lazy").setup({
 
     },
     {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require("configs.gitsigns")
-        end
-    },
-    {
         'feline-nvim/feline.nvim',
         branch = "0.5-compat",
         config = function()
@@ -119,5 +94,10 @@ require("lazy").setup({
             require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
         end
     },
-    { 'ThePrimeagen/vim-be-good' }
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {
+        },
+    }
 })
